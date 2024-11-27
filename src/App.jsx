@@ -1,13 +1,11 @@
 import React from 'react';
-import Catalog from './component/Catalog';
-import Header from './component/Header';
-import Slider from './component/Slider/Slider';
-
+import Catalog from './component/Catalog/Catalog';
+import Header from './component/Header/Header';
+import './App.css'
 function MyAppComponent() {
   return (
-    <div>
+    <div className='bodyApp'>
       <Header />
-      <Slider />
       <Catalog />
     </div>
   );

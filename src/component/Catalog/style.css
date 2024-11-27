@@ -1,0 +1,23 @@
+.itemimg {
+  width: 250px;
+  height: 150px;
+  margin-left: 50%;
+}
+
+.item-price {
+  background-color: rgb(108, 109, 124);
+  width: 25%;
+  color: rgb(75, 6, 6);
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 50%;
+}
+
+.buyButton {
+  margin-left: 50%;
+  background-color: rgb(133, 14, 14);
+  border: none;
+  border-radius: 3px;
+  width: 70px;
+  height: 20px;
+}

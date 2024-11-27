@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 
 const catalogItems = [
   {
@@ -24,11 +25,11 @@ function CatalogItem({ imageUrl, productName, price, buyUrl }) {
       </div>
       <div className="one">
         <h3 className="item-price"><b>{price}</b></h3>
+          <a href={buyUrl} className="buy">
+            <button className='buyButton'>Купить</button>
+          </a>
         <p className="item-text">{productName}</p>
         <div className="operations">
-          <a href={buyUrl} className="buy">
-            <button>Купить</button>
-          </a>
         </div>
       </div>
     </div>
