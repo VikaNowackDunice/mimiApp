@@ -1,11 +1,143 @@
-.usercard {
+/* Сброс базовых стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.headerContainer {
+  background-color: #1d1d1d;
   width: 100%;
-  height: 50px;
-  background-color: rgb(10, 10, 107);
-  color: white;
-  position: fixed;
+  height: 64px;
+}
+
+.headerTest {
+  width: 100%;
+  height: 48px;
+  background-color: #1d1d1d;
+  color: #ffd60a;
+  display: flex;
+  justify-content: space-between;
+  top: 8px;
+  left: 0;
+  position: relative;
+}
+
+.test {
+  width: 72px;
+  left: 35px;
+  font-family: "Poppins";
+  font-weight: 800;
+  line-height: 48px;
+  position: absolute;
+}
+
+.backPlus {
+  background-color: #ffd60a;
+  border-radius: 5px;
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  top: 1px;
+  right: 0;
+}
+
+.iconPlus {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+}
+
+.iconList {
+  width: 20px;
+  height: 14.5px;
+  position: absolute;
+  top: 18px;
+  left: 8px;
 }
 
 .nav {
   position: relative;
+}
+
+.conteinerPaymant {
+  background-color: black;
+  width: 40%;
+  height: 44px;
+  border-radius: 8px;
+  position: absolute;
+  color: white;
+  right: 10px;
+  top: 5px;
+}
+
+.money {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+}
+
+@media (max-width: 768px) {
+  .headerTest {
+    width: 95%;
+  }
+
+  .test {
+    font-size: 1.5rem;
+  }
+
+  .conteinerPaymant {
+    height: 40px;
+    position: absolute;
+    right: 0px;
+    top: 5px;
+  }
+
+  .money {
+    font-size: 0.9rem;
+  }
+
+  .backPlus {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+  }
+
+  .iconPlus {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 9px;
+    left: 11px;
+  }
+
+  .iconList {
+    width: 18px;
+    height: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .test {
+    font-size: 1.3rem;
+  }
+
+  .money {
+    font-size: 1.1rem;
+  }
+
+  .conteinerPaymant {
+    min-width: 100px;
+    height: 36px;
+  }
+
+  .backPlus {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 1px;
+    right: 1pz;
+  }
 }

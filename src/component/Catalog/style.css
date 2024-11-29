@@ -1,23 +1,324 @@
-.itemimg {
-  width: 250px;
-  height: 150px;
-  margin-left: 50%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
 }
 
-.item-price {
-  background-color: rgb(108, 109, 124);
+.catalog-container {
+  width: 100%;
+  padding: 20px;
+  background-color: #0f0f0f;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.itemImgWarrior {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  color: white;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.welcomText {
+  font-size: 6rem;
+  line-height: 6.5rem;
+}
+
+.textP {
+  font-size: 4.5rem;
+  line-height: 5rem;
+}
+
+.content-wears {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.buttonRead {
   width: 25%;
-  color: rgb(75, 6, 6);
-  border-radius: 5px;
+  height: 34px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  color: #1d1d1d;
+  font-size: 80%;
+  line-height: 20px;
   text-align: center;
-  margin-left: 50%;
+  border: none;
+  position: absolute;
+  bottom: 7px;
+  left: 12px;
 }
 
-.buyButton {
-  margin-left: 50%;
-  background-color: rgb(133, 14, 14);
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.itemimg {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.item-text {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.sliderMidle {
+  width: 100%;
+  height: 42px;
+  position: relative;
+  border-radius: 8px;
+  top: 16px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gameSlider:hover {
+  scroll-behavior: auto;
+}
+
+.gameSlider:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: 20px;
+  height: 42px;
+  background: linear-gradient(to left, #1d1d1d, transparent);
+  pointer-events: none;
+}
+
+.search {
+  background-color: #1d1d1d;
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  border-radius: 8px;
+  left: 0;
+}
+
+.iconSearch {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+.gameSlider {
+  width: 100%;
+  height: 42px;
+  border-radius: 8px;
+  background-color: #1d1d1d;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  position: relative;
+  align-items: center;
+  margin-left: 50px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.buttonGame {
+  color: #e1e1e1;
+  text-align: center;
+  background-color: #1d1d1d;
   border: none;
-  border-radius: 3px;
-  width: 70px;
-  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 6px;
+  width: 25%;
+  height: 42px;
+  flex: 0 0 auto;
+  position: relative; /* Для псевдо-элемента полосы */
+  transition: color 0.3s ease; /* Плавный переход для цвета текста */
+}
+
+.buttonGame::before {
+  content: "";
+  position: absolute;
+  top: 0; /* Полоса сверху */
+  left: 0;
+  right: 0;
+  height: 4px; /* Толщина полосы */
+  background-color: transparent; /* Исходный цвет полосы */
+  transition: background-color 0.3s ease; /* Плавный переход */
+}
+
+.buttonGame:hover::before {
+  background-color: #ffd60a; /* Полоса становится желтой при наведении */
+}
+
+.buttonGame:hover {
+  color: #ffd60a; /* Цвет текста становится желтым */
+}
+
+.chapterPopular,
+.chapterNew,
+.chapterCasino,
+.chapterSports {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(112.67px, 1fr));
+  grid-gap: 16px;
+  justify-items: center;
+  align-items: center;
+}
+
+.itemImgGames {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.headPopular,
+.headNew,
+.headCasino,
+.headSports {
+  width: 100%;
+  background-color: #0f0f0f;
+  height: 50px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.iconFire,
+.iconStone,
+.iconCircle,
+.iconSports {
+  position: absolute;
+  left: 0;
+  top: 25%;
+}
+
+.iconDollar {
+  position: absolute;
+  left: 8px;
+  top: 35%;
+}
+
+.popularHeader,
+.newHeader,
+.casinoHeader,
+.sportsHeader {
+  position: absolute;
+  left: 32px;
+  color: #fafafa;
+  top: 5px;
+}
+
+.popularP,
+.newP,
+.casinoP,
+.sportsP {
+  position: absolute;
+  right: 16px;
+  color: #e1e1e1;
+  bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .welcomText {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-top: 20px;
+    margin-left: 16px;
+  }
+
+  .textP {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-left: 16px;
+  }
+
+  .buttonRead {
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttonGame {
+    width: 70px;
+    font-size: 12px;
+    margin-left: 4px;
+  }
+
+  .gameSlider {
+    height: 40px;
+  }
+
+  .text-overlay {
+    padding: 8px 15px;
+  }
+
+  .welcomText {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .textP {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
+  .itemimg {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcomText {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .textP {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+
+  .buyButton {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  .itemimg {
+    width: 100%;
+    max-width: 200px;
+  }
 }

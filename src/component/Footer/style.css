@@ -1,0 +1,79 @@
+.footSection {
+  color: #e1e1e1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: start;
+  gap: 16px;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  font-weight: 400;
+  background-color: #1d1d1d;
+  width: 100%;
+  padding-left: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.iconWrapper {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  text-align: center;
+}
+
+.iconContent {
+  width: 50px; /* Размер иконки */
+  height: 50px;
+  cursor: pointer; /* Курсор указателя для клика */
+}
+
+.iconWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.iconWrapper:hover::before {
+  background-color: #ffd60a;
+}
+
+.footerGames {
+  font-weight: 400;
+  background-color: #1d1d1d;
+  width: 100%;
+}
+
+.fotterWarrior {
+  display: flex;
+  text-align: start;
+  justify-content: flex-start;
+  margin-left: 0;
+}
+
+.iconLegal {
+  width: 100%;
+}
+
+.fotterSectionEnd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1d1d1d;
+}
+
+.copyRight {
+  display: flex;
+  color: #e1e1e1;
+  justify-content: center;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.7rem;
+  height: 62px;
+  align-items: center;
+  background-color: #0f0f0f;
+}
