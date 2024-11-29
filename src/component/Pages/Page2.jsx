@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import myImage1 from "../image/2.jpg";
 import myImage2 from "../image/3.jpg";
@@ -12,10 +13,15 @@ import { ReactComponent as MyIconMark } from '../icon/mark.svg';
 import './style.css';
 
 function Page2() {
+  
     return (
         <div className="popularContainer">
           <div className="headerPopular">
+          <div className="iconWrapper">
+            <Link to="/">
             <MyIconMark className="iconMark" />
+            </Link>
+          </div>
             <h1 className="popularGames">Popular Games</h1>
           </div>
           <div className="headerGame">
